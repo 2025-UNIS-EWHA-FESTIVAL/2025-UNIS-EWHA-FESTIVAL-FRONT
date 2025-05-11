@@ -1,6 +1,5 @@
 import { useState } from "react";
 import AdBanner from "../components/AdBanner";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Link, useNavigate } from "react-router-dom";
 import Api from "../api/Api";
 
