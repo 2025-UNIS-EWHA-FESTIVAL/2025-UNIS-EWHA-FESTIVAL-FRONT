@@ -47,5 +47,8 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
   },
-  "proxy": "https://2025-unis-fest-back.site"
+  "proxy": "https://2025-unis-fest-back.site",
+  "engines": {
+  "node": "18.x"
+  }
 }
