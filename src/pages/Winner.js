@@ -120,11 +120,6 @@ const Winner = () => {
                     </form>
                     
 
-                    {/* <div className="w-[275px] h-[139px] flex flex-between">
-                        <p className="font-pretendard font-bold text-[15px] text-white">단과대</p>
-                        <input className="w-[189px] h-[35px] border-[2px] border-[#00ff15] placeholder-winner text-white font-[15px]" placeholder="ex) 조형예술대학"></input>
-                    </div> */}
-
                 </div>
                 
             </div>

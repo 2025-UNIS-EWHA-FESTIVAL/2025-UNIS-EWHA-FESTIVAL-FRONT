@@ -8,11 +8,11 @@ const Fail = () => {
     const prize = location.state?.prize ?? "없음";
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
 
-    // useEffect(() => {
-    //     if (!location.state) {
-    //         navigate("/enter"); 
-    //     }
-    // }, [location, navigate]);
+    useEffect(() => {
+        if (!location.state) {
+            navigate("/enter"); 
+        }
+    }, [location, navigate]);
 
 
     return (
