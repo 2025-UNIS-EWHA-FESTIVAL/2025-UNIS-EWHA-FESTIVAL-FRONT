@@ -9,9 +9,14 @@ const Enter = () => {
     const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
 
-    const handleCopy = () => {
-        setCopied(true);
+    const handleCopy = async () => {
+    try {
+        await navigator.clipboard.writeText(text);
         alert("클립보드에 복사되었습니다.");
+    } catch (err) {
+        alert("복사에 실패했습니다.");
+        console.error(err);
+    }
     };
 
     const handleClick = async () => {
@@ -49,12 +54,11 @@ const Enter = () => {
 
                     <div className="flex justify-evenly w-[284px] h-[38px] rounded-[20px] border-[3px] border-[#00ff15] bg-white mt-[27px] text-center items-center px-[10px] py-[5px]">
                         <p className="font-pretendard font-bold text-[16px]">토스뱅크 1001-7692-1690 강린아</p>
-                        <CopyToClipboard text={text} onCopy={handleCopy}>
                             <img 
                                 src='/assets/copy.svg' 
                                 className="cursor-pointer"
+                                onClick={handleCopy}
                             />
-                        </CopyToClipboard>
                     </div>
 
                     <Link to = '/enter-load'>
