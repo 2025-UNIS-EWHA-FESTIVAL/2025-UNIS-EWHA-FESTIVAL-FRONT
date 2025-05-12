@@ -38,7 +38,7 @@ function App() {
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
 
   useEffect(() => {
-    fetch('/api/status', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/status`, {
       method: 'GET',
     })
     .then((response) => {
