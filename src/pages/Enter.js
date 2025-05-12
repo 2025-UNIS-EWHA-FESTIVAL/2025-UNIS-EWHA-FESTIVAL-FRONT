@@ -95,7 +95,7 @@ const Enter = () => {
                         }}>
                             ~ 한 해 건강과 행복이 가득하길 기원합니다. ~
                         </p>
-                        <div className="w-[276px] h-[18px] font-pretendard bg-[#00FF15] text-center items-center border border-black px-[3px] py-[1px] text-[10px] font-black mt-[12px]"> 
+                        <div className="w-full h-[18px] font-pretendard bg-[#00FF15] text-center items-center border border-black px-[3px] py-[1px] text-[10px] font-black mt-[12px]"> 
                             이화여대 중앙실전창업학회 유니스의 앞으로의 활동도 기대해주세요!
                         </div>
                     </div>
