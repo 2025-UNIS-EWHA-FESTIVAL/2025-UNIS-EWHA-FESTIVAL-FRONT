@@ -18,21 +18,23 @@ const Enter = () => {
     };
 
     const handleClick = async () => {
-        console.log("handleClick called");
-        try {
-            const response = await Api.post('/api/draw/enter');
-            const { orderNumber, isWinner, prize } = response.data.data;
-            navigate('/enter-load', {state: {orderNumber, isWinner, prize}});
-        }
-        catch(error) {
-            if (error.response) {
-                console.error("응답 에러", error.response.data);
-            } else if (error.request) {
-                console.error("요청 자체 실패", error.request);
-            } else {
-                console.error("기타 에러", error.message);
+        const confirmed = window.confirm("입금 미확인 시 상품 발송이 어려울 수 있습니다. 입금하셨나요?");
+        if(confirmed) {
+            try {
+                const response = await Api.post('/api/draw/enter');
+                const { orderNumber, isWinner, prize } = response.data.data;
+                navigate('/enter-load', {state: {orderNumber, isWinner, prize}});
             }
-            alert("응모에 실패했습니다. 다시 시도해 주세요.");
+            catch(error) {
+                if (error.response) {
+                    console.error("응답 에러", error.response.data);
+                } else if (error.request) {
+                    console.error("요청 자체 실패", error.request);
+                } else {
+                    console.error("기타 에러", error.message);
+                }
+                alert("응모에 실패했습니다. 다시 시도해 주세요.");
+            }
         }
     }
 
@@ -44,7 +46,7 @@ const Enter = () => {
                     <AdBanner/>
                 </div>
                 <div className="absolute flex flex-col w-[284px] h-[461px] mt-[61px] mb-[66px] mr-[43px] ml-[43px]">
-                    <div className="w-[284px] h-[70px] text-center text-[25px]">
+                    <div className="w-[290px] h-[70px] text-center text-[25px]">
                         <span className="font-pretendard text-[#00FF15] font-bold">"990원 </span>
                         <span className="font-pretendard text-white font-bold">송금 후"</span> <br/>
                         <span className="font-pretendard text-white font-bold"> 응모 완료 버튼을 눌러주세요</span>
