@@ -5,7 +5,6 @@ import Api from "../api/Api";
 
 const Enter = () => {
     const text = "토스뱅크 1001-9178-6947";
-    const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
 
     const handleCopy = async () => {
@@ -51,8 +50,8 @@ const Enter = () => {
                         <span className="font-pretendard text-white font-bold"> 응모 완료 버튼을 눌러주세요</span>
                     </div>
 
-                    <div className="flex justify-evenly w-[284px] h-[38px] rounded-[20px] border-[3px] border-[#00ff15] bg-white mt-[27px] text-center items-center px-[10px] py-[5px]">
-                        <p className="font-pretendard font-bold text-[16px]">토스뱅크 1001-9178-6947 강린아</p>
+                    <div className="flex justify-evenly w-[290px] h-[38px] rounded-[20px] border-[3px] border-[#00ff15] bg-white mt-[35px] text-center items-center px-[10px] py-[5px]">
+                        <p className="font-pretendard font-bold text-[14px]">토스뱅크 1001-9178-6947 강린아</p>
                             <img 
                                 src='/assets/copy.svg' 
                                 className="cursor-pointer"
