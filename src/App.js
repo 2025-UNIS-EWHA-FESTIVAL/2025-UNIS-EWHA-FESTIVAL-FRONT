@@ -8,6 +8,7 @@ import EnterLoad from './pages/EnterLoad';
 import Winner from './pages/Winner';
 import Fail from './pages/Fail';
 import WinnerInfo from './pages/WinnerInfo';
+import Api from './api/Api';
 
 function MaintenancePage() {
   return (
@@ -38,21 +39,13 @@ function App() {
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/status`, {
-      method: 'GET',
-    })
+    Api
+    .get('/api/status')
     .then((response) => {
-      if(!response.ok) {
-        throw new Error(`status: ${response.status}`);
-      } 
-      return response.text();
-    })
-    .then((text) => {
-      console.log("서버점검상태:", text);
-      const parsed = JSON.parse(text)
-      console.log("점검여부:", parsed.data);
-      setIsUnderMaintenance(!parsed.data);
-    })
+        console.log("서버점검상태: ", response.data);
+        setIsUnderMaintenance(!response.data.data);
+      }
+    )
     .catch((error) => {
       console.log("점검 상태 확인 실패", error);
       setIsUnderMaintenance(true);
