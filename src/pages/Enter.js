@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Api from "../api/Api";
 
 const Enter = () => {
-    const text = "1001-7692-1690";
+    const text = "토스뱅크 1001-9178-6947";
     const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
 
@@ -52,7 +52,7 @@ const Enter = () => {
                     </div>
 
                     <div className="flex justify-evenly w-[284px] h-[38px] rounded-[20px] border-[3px] border-[#00ff15] bg-white mt-[27px] text-center items-center px-[10px] py-[5px]">
-                        <p className="font-pretendard font-bold text-[16px]">토스뱅크 1001-7692-1690 강린아</p>
+                        <p className="font-pretendard font-bold text-[16px]">토스뱅크 1001-9178-6947 강린아</p>
                             <img 
                                 src='/assets/copy.svg' 
                                 className="cursor-pointer"
