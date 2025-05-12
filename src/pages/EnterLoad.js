@@ -28,7 +28,7 @@ const EnterLoad = () => {
     }, [state, navigate]);
 
     return(
-        <div className="flex flex-col items-center min-h-screen overflow-hidden">
+        <div className="flex flex-col items-center h-full overflow-hidden">
             <div className="relative w-[375px] h-[667px] bg-cover bg-center overflow-hidden"
                 style={{ backgroundImage: "url('/assets/enterLoad.svg')" }}>
                 <div className="top-0 left-0 w-full h-[85px]">

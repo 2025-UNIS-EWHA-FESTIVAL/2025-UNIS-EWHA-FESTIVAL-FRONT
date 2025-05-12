@@ -38,7 +38,7 @@ const Enter = () => {
     }
 
     return (
-    <div className="flex flex-col justify-center items-center min-h-screen overflow-hidden">
+    <div className="flex flex-col justify-center items-center h-full overflow-hidden">
         <div className="relative w-[375px] h-[667px] bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/enter.svg')" }}>
                 <div className="top-0 left-0 w-full h-[85px]">

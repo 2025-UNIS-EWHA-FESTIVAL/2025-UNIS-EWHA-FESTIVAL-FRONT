@@ -4,7 +4,7 @@ const WinnerInfo = () => {
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
 
     return (
-        <div className="flex flex-col items-center min-h-screen overflow-hidden">
+        <div className="flex flex-col items-center h-full overflow-hidden">
             <div className="relative w-[375px] h-[667px] bg-cover bg-center overflow-hidden"
                 style={{ backgroundImage: "url('/assets/winnerInfo.svg')" }}>
                 <div className="absolute top-0 left-0 w-full h-[85px]">
