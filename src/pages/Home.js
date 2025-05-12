@@ -5,7 +5,7 @@ import ReviewCarousel from "../components/ReviewCarousel";
 const home = () => {
     return (
         <div className="flex flex-col justify-center items-center w-screen h-screen overflow-hidden">
-            <div className="relative w-full h-[667px] max-w-[375px] mx-auto bg-cover bg-center overflow-hidden"
+            <div className="relative w-[375px] mx-auto bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/home.svg')" }}>
                     <div className="absolute top-0 left-0 w-full h-[85px]">
                         <AdBanner/>
