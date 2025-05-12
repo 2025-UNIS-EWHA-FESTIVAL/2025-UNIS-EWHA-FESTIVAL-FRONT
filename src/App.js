@@ -45,12 +45,13 @@ function App() {
       if(!response.ok) {
         throw new Error(`status: ${response.status}`);
       } 
-      return response.json();
+      return response.text();
     })
-    .then((data) => {
-      console.log("서버점검상태:", data);
-      console.log("점검여부:", data.data);
-      setIsUnderMaintenance(!data.data);
+    .then((text) => {
+      console.log("서버점검상태:", text);
+      const parsed = JSON.parse(text)
+      console.log("점검여부:", parsed.data);
+      setIsUnderMaintenance(!parsed.data);
     })
     .catch((error) => {
       console.log("점검 상태 확인 실패", error);
