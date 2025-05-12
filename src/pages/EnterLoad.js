@@ -34,7 +34,7 @@ const EnterLoad = () => {
                 <div className="top-0 left-0 w-full h-[85px]">
                     <AdBanner/>
                 </div>
-                <div className="relative left-1/2 -translate-x-1/2 top-[90px] w-[150px] h-[36px] font-pretendard bg-[#00FF15] text-center p-[6px] text-[18px] border border-black font-black">
+                <div className="relative left-1/2 -translate-x-1/2 top-[90px] w-[160px] h-[36px] font-pretendard bg-[#00FF15] text-center p-[6px] text-[16px] border border-black font-black">
                     ◆과연 결과는?◆
                 </div>
 

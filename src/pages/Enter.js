@@ -46,7 +46,7 @@ const Enter = () => {
                     <AdBanner/>
                 </div>
                 <div className="absolute flex flex-col w-[284px] h-[461px] mt-[61px] mb-[66px] mr-[43px] ml-[43px]">
-                    <div className="w-[290px] h-[70px] text-center text-[25px]">
+                    <div className="w-[290px] h-[70px] text-center text-[24px]">
                         <span className="font-pretendard text-[#00FF15] font-bold">"990원 </span>
                         <span className="font-pretendard text-white font-bold">송금 후"</span> <br/>
                         <span className="font-pretendard text-white font-bold"> 응모 완료 버튼을 눌러주세요</span>
