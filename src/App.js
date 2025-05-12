@@ -9,6 +9,13 @@ import Winner from './pages/Winner';
 import Fail from './pages/Fail';
 import WinnerInfo from './pages/WinnerInfo';
 import Api from './api/Api';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize("G-QH2ZDQ5PWJ");
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
 function MaintenancePage() {
   return (
