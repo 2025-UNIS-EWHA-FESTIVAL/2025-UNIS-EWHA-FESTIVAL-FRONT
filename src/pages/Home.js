@@ -13,7 +13,7 @@ const Home = () => {
 
                     <Link to = '/enter'>
                         <img
-                            src='/assets/enterBtn.svg'
+                            src='/assets/homeBtn.svg'
                             alt = "응모 버튼"
                             className="absolute left-1/2 -translate-x-1/2 bottom-[230px] cursor-pointer">
                         </img>

@@ -61,7 +61,7 @@ const Enter = () => {
                     </div>
 
                         <img
-                            src='/assets/enterBtn2.svg'
+                            src='/assets/enterBtn.svg'
                             alt = "응모 버튼"
                             className="relative left-1/2 -translate-x-1/2 mt-[40px] cursor-pointer"
                             onClick={handleClick}>
