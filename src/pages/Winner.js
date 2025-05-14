@@ -11,7 +11,6 @@ const Winner = () => {
     const navigate = useNavigate();
     
     useEffect(() => {
-            console.log("[Fail.jsx] location.state:", location.state);
         if (!location.state) {
             navigate("/enter"); 
         }

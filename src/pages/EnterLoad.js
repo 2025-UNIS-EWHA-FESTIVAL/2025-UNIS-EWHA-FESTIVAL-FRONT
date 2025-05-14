@@ -9,7 +9,6 @@ const EnterLoad = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("[EnterLoad.jsx] 전달된 state:", state);
         if (!state) {
             navigate('/enter');
             return;

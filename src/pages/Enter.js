@@ -21,7 +21,6 @@ const Enter = () => {
         if(confirmed) {
             try {
                 const response = await Api.post('/api/draw/enter');
-                console.log("[Enter.jsx] 응답 데이터:", response.data);
                 const { orderNumber, isWinner, prize } = response.data.data;
                 navigate('/enter-load', {state: {orderNumber, isWinner, prize}});
             }
