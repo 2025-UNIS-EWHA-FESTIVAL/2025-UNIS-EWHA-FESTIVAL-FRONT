@@ -61,7 +61,7 @@ function App() {
     });
   },[]);
 
-    if (isUnderMaintenance === null) return null; 
+    if (isUnderMaintenance === null) return <div>로딩 중...</div>;
 
   return isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>;
   
