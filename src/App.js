@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import Enter from './pages/Enter';
@@ -11,11 +12,6 @@ import WinnerInfo from './pages/WinnerInfo';
 import Api from './api/Api';
 import ReactGA from 'react-ga4';
 
-ReactGA.initialize("G-QH2ZDQ5PWJ");
-
-  useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
-  }, [location]);
 
 function MaintenancePage() {
   return (
@@ -43,7 +39,12 @@ function AppRoutes() {
 }
 
 function App() {
+  const location = useLocation();
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
   useEffect(() => {
     Api
