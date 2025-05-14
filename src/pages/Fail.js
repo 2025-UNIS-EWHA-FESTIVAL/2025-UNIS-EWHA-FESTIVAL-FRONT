@@ -9,10 +9,10 @@ const Fail = () => {
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
 
     useEffect(() => {
-        // if (!location.state) {
-        //     navigate("/enter"); 
-        // }
-    }, []);
+        if (!location.state) {
+            navigate("/enter"); 
+        }
+    }, [location, navigate]);
 
 
     return (
