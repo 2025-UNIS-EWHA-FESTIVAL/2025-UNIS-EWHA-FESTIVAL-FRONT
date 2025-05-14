@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AdBanner from "../components/AdBanner";
 import { useLocation, useNavigate } from "react-router-dom";
 import '../App.css';
 
