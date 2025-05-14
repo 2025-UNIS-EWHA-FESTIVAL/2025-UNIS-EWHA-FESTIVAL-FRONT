@@ -39,7 +39,7 @@ function AppRoutes() {
   );
 }
 
-function App() {
+function AppContent() {
   const location = useLocation();
   const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
 
@@ -65,6 +65,14 @@ function App() {
 
   return isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>;
   
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
 }
 
 export default App;
