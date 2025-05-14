@@ -9,6 +9,7 @@ const Fail = () => {
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
 
     useEffect(() => {
+            console.log("[Fail.jsx] location.state:", location.state);
         if (!location.state) {
             navigate("/enter"); 
         }

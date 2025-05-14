@@ -21,6 +21,7 @@ const Enter = () => {
         if(confirmed) {
             try {
                 const response = await Api.post('/api/draw/enter');
+                console.log("[Enter.jsx] 응답 데이터:", response.data);
                 const { orderNumber, isWinner, prize } = response.data.data;
                 navigate('/enter-load', {state: {orderNumber, isWinner, prize}});
             }
@@ -60,14 +61,12 @@ const Enter = () => {
                             />
                     </div>
 
-                    <Link to = '/enter-load'>
                         <img
                             src='/assets/enterBtn.svg'
                             alt = "응모 버튼"
                             className="relative left-1/2 -translate-x-1/2 mt-[40px] cursor-pointer"
                             onClick={handleClick}>
                         </img>
-                    </Link>
 
                     <div className="w-full">
                         <p className="font-pretendard font-medium text-[10px] text-center mt-[40px]">
