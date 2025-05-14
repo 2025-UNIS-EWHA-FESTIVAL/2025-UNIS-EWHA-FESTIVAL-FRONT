@@ -12,6 +12,7 @@ import WinnerInfo from './pages/WinnerInfo';
 import Api from './api/Api';
 import ReactGA from 'react-ga4';
 
+ReactGA.initialize("G-QH2ZDQ5PWJ");
 
 function MaintenancePage() {
   return (
@@ -60,11 +61,10 @@ function App() {
     });
   },[]);
 
-  return(
-    <Router>
-      {isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>}
-    </Router>
-  )
+    if (isUnderMaintenance === null) return null; 
+
+  return isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>;
+  
 }
 
 export default App;
