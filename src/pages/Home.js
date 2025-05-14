@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AdBanner from "../components/AdBanner";
 import ReviewCarousel from "../components/ReviewCarousel";
 
-const home = () => {
+const Home = () => {
     return (
         <div className="flex flex-col justify-center items-center h-full overflow-hidden">
             <div className="relative w-[375px] h-[667px] bg-cover bg-center overflow-hidden"
@@ -33,4 +33,4 @@ const home = () => {
     );
 }
 
-export default home;
+export default Home;
