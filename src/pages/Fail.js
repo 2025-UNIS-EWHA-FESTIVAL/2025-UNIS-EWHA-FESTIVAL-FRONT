@@ -4,16 +4,11 @@ import AdBanner from "../components/AdBanner";
 
 const Fail = () => {
     const navigate = useNavigate();
-    const location = useLocation();
-    const prize = location.state?.prize ?? "없음";
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
 
     useEffect(() => {
-            console.log("[Fail.jsx] location.state:", location.state);
-        if (!location.state) {
-            navigate("/enter"); 
-        }
-    }, [location, navigate]);
+            
+    }, []);
 
 
     return (
