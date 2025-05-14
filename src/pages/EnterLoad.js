@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import AdBanner from "../components/AdBanner";
-import Api from "../api/Api";
 import '../App.css';
 
 const EnterLoad = () => {
