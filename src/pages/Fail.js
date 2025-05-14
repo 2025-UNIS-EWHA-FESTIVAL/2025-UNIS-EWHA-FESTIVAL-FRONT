@@ -1,10 +1,18 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import AdBanner from "../components/AdBanner";
 
 const Fail = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const prize = location.state?.prize ?? "없음";
     const url = "https://www.instagram.com/p/DJWJaBGBebB/?img_index=1"
+
+    useEffect(() => {
+        // if (!location.state) {
+        //     navigate("/enter"); 
+        // }
+    }, []);
 
 
     return (

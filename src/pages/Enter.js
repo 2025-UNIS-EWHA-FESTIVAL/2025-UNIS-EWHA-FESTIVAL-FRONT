@@ -1,4 +1,3 @@
-import { useState } from "react";
 import AdBanner from "../components/AdBanner";
 import { Link, useNavigate } from "react-router-dom";
 import Api from "../api/Api";
