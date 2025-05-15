@@ -39,39 +39,38 @@ function AppRoutes() {
   );
 }
 
-// function AppContent() {
-//   const location = useLocation();
-//   const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
+function AppContent() {
+  const location = useLocation();
+  const [isUnderMaintenance, setIsUnderMaintenance] = useState(null);
 
-//   useEffect(() => {
-//     ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
-//   }, [location]);
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
 
-//   useEffect(() => {
-//     Api
-//     .get('/api/status')
-//     .then((response) => {
-//         console.log("서버점검상태: ", response.data);
-//         setIsUnderMaintenance(!response.data.data);
-//       }
-//     )
-//     .catch((error) => {
-//       console.log("점검 상태 확인 실패", error);
-//       setIsUnderMaintenance(true);
-//     });
-//   },[]);
+  useEffect(() => {
+    Api
+    .get('/api/status')
+    .then((response) => {
+        console.log("서버점검상태: ", response.data);
+        setIsUnderMaintenance(!response.data.data);
+      }
+    )
+    .catch((error) => {
+      console.log("점검 상태 확인 실패", error);
+      setIsUnderMaintenance(true);
+    });
+  },[]);
 
-//   if (isUnderMaintenance === null) return <div>로딩 중...</div>;
+  if (isUnderMaintenance === null) return <div>로딩 중...</div>;
 
-//   return isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>;
+  return isUnderMaintenance ? <MaintenancePage/> : <AppRoutes/>;
   
-// }
+}
 
 function App() {
   return (
     <Router>
-      {/* <AppContent /> */}
-      <AppRoutes />
+      <AppContent />
     </Router>
   );
 }
